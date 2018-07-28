@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Card, Button, List } from "antd";
+import { Link } from "react-router-dom"
 import axios from "axios";
 import "./main.less";
 
@@ -32,6 +33,7 @@ class CSider extends Component {
     const { noReplyList } = this.state;
     return (
       <div>
+        { this.props.children }
         <Card
           title="CNode：Node.js专业中文社区"
           className="sider-card"
@@ -51,7 +53,7 @@ class CSider extends Component {
             renderItem={ item => (
               <List.Item key={ item.id }>
                 <List.Item.Meta
-                  title={ <a href="https://ant.design">{ item.title }</a> }  />
+                  title={ <Link to={ '/topics/' + item.id }>{ item.title }</Link> }  />
               </List.Item>
             ) } 
           />

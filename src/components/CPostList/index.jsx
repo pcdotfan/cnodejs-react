@@ -102,7 +102,7 @@ class CPostList extends Component {
                   title={
                     <Link to={ '/topics/' + item.id }>
                       { item.title }{ " " }
-                      { item.top ? <Tag color="#87d068">置顶</Tag> : "" }{ " " }
+                      { item.top ? <Tag color="#87d068">置顶</Tag> : "" }
                     </Link>
                   }
                   description={ this.getExcerpt( item.content ) }
